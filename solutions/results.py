@@ -79,14 +79,15 @@ class Result:
         For now it returns only time series regresssiong coefficients, linearity and trend strength
 
         Args:
-            top_name (str): _description_
-            month_lag (int): _description_
+            top_name (str): top name
+            month_lag (int): number of month to look back
 
         Raises:
-            ValueError: _description_
+            ValueError: raised when the corresponding top name is not found in
+            dataset
 
         Returns:
-            dict: _description_
+            dict: dictionary containing time series regresssiong coefficients, linearity and trend strength
         """
         if top_name not in self.top_column_name_list:
             raise ValueError('top name not found in the dataframe')
@@ -102,6 +103,7 @@ class Result:
                 data=ts_last_year_data,
                 params=LinearModelParams()
             )
+
             linear_model.fit()
 
             slope,intercept = linear_model.model.params['x1'], linear_model.model.params['const']
@@ -123,8 +125,8 @@ class Result:
         For now, it is only cumulative growth rate
 
         Args:
-            top_name (str): _description_
-            month_lag (int): _description_
+            top_name (str): top name
+            month_lag (int): number of month to look back 
 
         Returns:
             dict: _description_
@@ -154,7 +156,7 @@ class Result:
             of univariate time series
 
         Returns:
-            str: _description_
+            str: representing trend verb of the input slope
         """
         if slope == 0:
             return 'no trending'
@@ -171,7 +173,7 @@ class Result:
         and return results
 
         Args:
-            top_name (str): _description_
+            top_name (str): top name
 
         Raises:
             ValueError: raised when the top name is not in the 
