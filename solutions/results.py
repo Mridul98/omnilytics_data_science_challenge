@@ -199,10 +199,11 @@ class Result:
         perf_result = self.last_12m(top_name=top_name)
 
         slope = perf_result['slope']
-        slope_str = "{:.2f}".format(slope)
+        slope_str = "{:.2f}".format(abs(slope))
         cmgr = "{:.2f}".format(perf_result['monthly_cumulative_growth_rate'])
+        linearity_strength = "{:.4f}".format(perf_result['linearity'])
 
-        result_string = f'''{top_name}'s last year cumulative monthly growth rate is: {cmgr} % with {self.__get_trend_verb(slope)} of co-efficient {slope_str} approx.'''
+        result_string = f'''{top_name}'s last year cumulative monthly performance growth rate is: {cmgr} % and {self.__get_trend_verb(slope)} performance of co-efficient {slope_str} (approx.) with linearity strength of {linearity_strength}'''
         return {
             top_name : result_string
         }
