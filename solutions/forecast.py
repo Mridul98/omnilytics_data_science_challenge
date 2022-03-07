@@ -57,7 +57,7 @@ class ProphetForecaster:
         
     def predict(self,step=48):
         
-        self.forecast_df = self.prophet_model.predict(steps=step)
+        self.forecast_df = self.prophet_model.predict(steps=step,include_history=True)
         
     def plot_predictions(self):
         
@@ -70,30 +70,29 @@ class ProphetForecaster:
             
             input_df[identifier_col_name].iloc[-self.pick_last_datapoints_num:] = 'train'
         
-        forecast_renamed = self.forecast_df.rename(
-            columns={
-                'time': self.date_col_name,
-                'fcst' : self.value_col_name
-            }
-        )
+        # forecast_renamed = self.forecast_df.rename(
+        #     columns={
+        #         'time': self.date_col_name,
+        #         'fcst' : self.value_col_name
+        #     }
+        # )
         
-        forecast_renamed[identifier_col_name] = 'forecasted'
+        # forecast_renamed[identifier_col_name] = 'forecasted'
         
         new_df = pd.concat(
             [
                 input_df,
-                forecast_renamed
+                self.forecast_df
             ],
-            axis=0
+            axis=1
         )
     
         fig = px.line(
             new_df,
-            x=self.date_col_name,
-            y=self.value_col_name,
-            color=identifier_col_name
+            x='time',
+            y=[self.value_col_name,'fcst']
         )
-       
+      
         fig.show()
 
     
