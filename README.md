@@ -1,5 +1,6 @@
 ## Before running any program, please consider installing 
 ## packages defined in 'solutions/requirements.txt'
+## please install the packages in a python virtual environment
     1. Run pip3 install -r 'solutions/requirements.txt'
 
 ## Part - 1
