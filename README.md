@@ -17,7 +17,7 @@
 #### how to run the code related to part 1
 
     1. change directory to solutions
-    2. run 'python3 forecast.py'
+    2. run 'python3 results.py'
 
 ## Part - 2 
 
