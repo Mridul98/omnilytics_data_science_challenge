@@ -1,3 +1,7 @@
+## Before running any program, please consider installing 
+## packages defined in 'solutions/requirements.txt'
+    1. Run pip3 install -r 'solutions/requirements.txt'
+
 ## Part - 1
 
 ### Performance measured using CMGR (Cumulative Monthly Growth Rate): 
@@ -8,6 +12,11 @@
 ### and the window_length = |s-e|
 
 ### 2 and 3. the corresponding code of these part can be found in solutions/results.py module.
+
+#### how to run the code related to part 1
+
+    1. change directory to solutions
+    2. run 'python3 forecast.py'
 
 ## Part - 2 
 
@@ -34,6 +43,14 @@
     prophet top 2 = 3.8190
     prophet top 3 = 2.4147
     
+## How to run prophet forecasting:
+
+    1. Run 'cd solutions/'
+    2. run 'python3 forecast.py --top_name 'top 1' --seasonality_mode 'multiplicative' --predict_step_size 144
+
+    Here, (predict_step_size / 4) = the number of weeks to be forecasted
+
+
 
 ## Overall performance ranking (Best to worst): 
 
