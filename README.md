@@ -83,7 +83,11 @@
 
 
 
-## Overall performance ranking (Best to worst): 
+## Overall performance ranking using RMSE (Best to worst): 
+
+## Primarily RMSE is used because there seems to be no outliers in the time series.
+## Otherwise we had to use other metrics that doesnt punish much to the outlier, more 
+## specifically non-sensitive to outliers. (e.g. : Mean Absolute Error) 
 
 ### top 1:
 
