@@ -30,7 +30,8 @@
 ## Part - 2 
 
 ### Evaluation of the different fit for different tops using RMSE:
-
+    The demand was calculated in a sense that, over a certain period of time,
+    minimum how much product should be up for sell. So, I have calculated the mean of the values over the time period. Specifically, (total sales over a period / length of the period)
     fit top1  = 2.14929
     fit2 top1 = 1.7787
     fit3 top1 = 1.7579
@@ -39,6 +40,7 @@
     
     according to fit3 for top 1 , the trend will be downwards for the next 12 months
 
+    According to the best forecast, the average monthly demand for top1 over the next 3,6 and 12 months will be 598.77 , 585.48 , 556.64 respectively
 
     fit top2  = 8.3345
     fit2 top2 = 4.4031
@@ -46,7 +48,9 @@
 
     best fit for top2 (best to worst): fit3 > fit2 > fit
 
-    according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with a little bit of downward trend
+    according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with a little bit of flat trend.
+
+   According to the best forecast, the average monthly demand for top2 over the next 3,6 and 12 months will be 1678.40 , 1736.37 , 2097.53 respectively
 
 
     fit top3  = 2.9793
@@ -55,8 +59,9 @@
 
     best fit for top3 (best to worst): fit3 > fit2 > fit
 
-    according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with upward trend
-
+    according to fit3 for top 3, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with upward trend.
+    
+    According to the best forecast, the average monthly demand for top3 over the next 3,6 and 12 months will be 947.13 , 990.24 , 1129.00 respectively
 
     prophet top 1 = 1.7560
     prophet top 2 = 3.8190
