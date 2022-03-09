@@ -10,6 +10,9 @@
     3. Linearity Strength of the time series (indicator of how the linear the time series is. Value close to 0 means the time series is fairly non-linear)
 
     (most of the time, cumulative monthly growth rate is enough to measure the performance of different tops)
+
+![cgr](/solutions/plot_images/cgr_top.png)
+
 ### Performance measured using CMGR (Cumulative Monthly Growth Rate): 
 
     ((t_s/t_e)^(1/window_length)) - 1
@@ -26,13 +29,16 @@
 
 ## Part - 2 
 
-### Evaluation of the different fit for different tops using RMSE
+### Evaluation of the different fit for different tops using RMSE:
 
     fit top1  = 2.14929
     fit2 top1 = 1.7787
     fit3 top1 = 1.7579
     
     best fit for top1 (best to worst): fit3 > fit2 > fit 1 
+    
+    according to fit3 for top 1 , the trend will be downwards for the next 12 months
+
 
     fit top2  = 8.3345
     fit2 top2 = 4.4031
