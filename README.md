@@ -50,7 +50,7 @@
 
     according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with a little bit of flat trend.
 
-   According to the best forecast, the average monthly demand for top2 over the next 3,6 and 12 months will be 1678.40 , 1736.37 , 2097.53 respectively
+    According to the best forecast, the average monthly demand for top2 over the next 3,6 and 12 months will be 1678.40 , 1736.37 , 2097.53 respectively
 
 
     fit top3  = 2.9793
