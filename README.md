@@ -57,6 +57,7 @@
 
     according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with upward trend
 
+
     prophet top 1 = 1.7560
     prophet top 2 = 3.8190
     prophet top 3 = 2.4147
