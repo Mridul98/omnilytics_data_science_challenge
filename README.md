@@ -6,8 +6,8 @@
 ## Part - 1
 ## Performance were evaluated based on 3 criteria
     1. Cumulative monthly growth rate (it is the indicator of the last years growth)
-    2. Trend estimation using Linear Regression (it is the indicator whether the trend is downward or upward)
-    3. Linearity Strength of the time series (indicator of how the linear the time series is. Value close to 0 means the time series is fairly non-linear)
+    2. Trend estimation using Linear Regression (it is the indicator whether the trend is downward or upward) modeled using y = mx+c
+    3. Linearity Strength of the time series (indicator of how linear the time series is. Value close to 0 means the time series is fairly non-linear)
 
     (most of the time, cumulative monthly growth rate is enough to measure the performance of different tops)
 
@@ -46,11 +46,16 @@
 
     best fit for top2 (best to worst): fit3 > fit2 > fit
 
+    according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with a little bit of downward trend
+
+
     fit top3  = 2.9793
     fit2 top3 = 2.4637
     fit3 top3 = 2.3682
 
     best fit for top3 (best to worst): fit3 > fit2 > fit
+
+    according to fit3 for top 2, the performance will have the yearly seasonality as similar as the last two year's seasonality pattern with upward trend
 
     prophet top 1 = 1.7560
     prophet top 2 = 3.8190
@@ -67,9 +72,6 @@
 ### top 3
 ![forecasted top 2](/solutions/plot_images/prophet_top3.png)
 
-    prophet top 1 = 1.7560
-    prophet top 2 = 3.8190
-    prophet top 3 = 2.4147
     
 ## How to run prophet forecasting:
 
