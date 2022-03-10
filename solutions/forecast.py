@@ -1,5 +1,4 @@
-from curses.panel import top_panel
-from statistics import mean
+
 import pandas as pd
 import argparse
 import plotly.express as px
