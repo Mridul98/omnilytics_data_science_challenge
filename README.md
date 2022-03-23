@@ -15,7 +15,7 @@
 
 ### Performance measured using CMGR (Cumulative Monthly Growth Rate): 
 
-    ((t_s/t_e)^(1/window_length)) - 1
+    ((t_e/t_s)^(1/window_length)) - 1
 
 ### where, t_s is total sales up until timestamp s from the beginning and t_e is total sales up until timestamp  e from s.
 ### and the window_length = |s-e| (for this purpose, it is equal to 12, since we are calculating based on the cumulative performance of the last year only)
